@@ -33,7 +33,7 @@ class SendForgotPasswordEmailService {
     }
 
     const { token } = await this.userTokensRepository.generate(emailExists.id);
-
+    console.log('dasd');
     await this.mailProvider.sendMail(
       email,
       `Pedido de recuperação de senha recebido: ${token}`,
