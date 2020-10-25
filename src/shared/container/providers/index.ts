@@ -11,7 +11,7 @@ container.registerSingleton<iStorageProvider>(
   DiskStorageProvider,
 );
 
-container.registerSingleton<iMailProvider>(
+container.registerInstance<iMailProvider>(
   'MailProvider',
-  EtherealMailProvider,
+  new EtherealMailProvider(),
 );
